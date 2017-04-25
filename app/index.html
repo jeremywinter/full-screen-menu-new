@@ -7,12 +7,37 @@
     <meta name="description" content="">
     <meta name="author" content="jeremywinter.com">
   	<title>full screen menu made with bootsrap</title>
-  	<link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  	<link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
-	<h1>Hello World!</h1>
-	</div>
+  <div class="container text-center">
+    <h1>Hello World!</h1>
+  </div>
+  <div class="container text-center">
+    <button class="btn btn-default" id="menu-modal-trigger" href="#menu-modal-01">Modal Menu Demo</button>
+  </div>
+
+<!-- //////////////////////////////// MODALS -->
+ 
+  <div id="menu-modal-01"> 
+      <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+      <div id="close-btn-container" class="close-menu-modal-01">
+          <img class="close-btn" src="img/closebt-black.svg">
+      </div>
+      
+      <div class="modal-content text-center"> <!--Your modal content goes here-->
+          <ul class=nav>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+          </ul>
+      </div>
+  </div>
+  <script src="minjs/bootstrap.js"></script>
+  <script src="minjs/jquery-3.2.1.js"></script>
+  <script src="minjs/animatedModal.js"></script>
 	<script src="minjs/main.js"></script>
 </body>
 </html>

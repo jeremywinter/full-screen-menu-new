@@ -9,8 +9,9 @@
 @import 'mixins';
 @import 'media';
 @import 'bootstrap';
+@import 'animate';
 
-$font-stack: Helvetica, sans-serif;
+$font-stack: 'Roboto', Helvetica, sans-serif;
 
 // testing only
 .testing {
@@ -19,11 +20,15 @@ $font-stack: Helvetica, sans-serif;
   color: $card-white;
 }
 
+.red {outline: 1px solid red;}
+
+.blue {outline: 1px solid blue;}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: $light-grey;
+  background-color: $dark-grey;
 }
 
 body {
@@ -37,3 +42,183 @@ h3,
 h4 {
   color: $primary-color;
 }
+
+a {
+  color:$primary-color;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// modal components
+#btn-close-modal {
+  width:100%;
+  text-align: center;
+  cursor:pointer;
+  color: $primary-color;
+}
+
+#close-btn-container {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  margin-top: 30px;
+  padding-right: 30px;
+}
+
+.close-btn {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  transform:rotate(90deg);
+}
+
+// bootstrap modal styles to over write
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+       -o-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+// edited
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 0px solid #fff;
+  border: 0px solid rgba(0, 0, 0, .0);
+  border-radius: 0px;
+  outline: 0;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .0);
+          box-shadow: 0 0px 0px rgba(0, 0, 0, .0);
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .0);
+            box-shadow: 0 0px 0px rgba(0, 0, 0, .0);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+// end of bootstrap modal styles
+
+// bootstrap nav
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: none;
+}
+.nav > li {
+  position: relative;
+  display: block;
+}
+.nav > li > a {
+  font-size: 2em;
+  font-weight: 300;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #fff;
+  color: $primary-color;
+  text-decoration: none;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: #eee;
+  border-color: #337ab7;
+}
+.nav .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.nav > li > a > img {
+  max-width: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

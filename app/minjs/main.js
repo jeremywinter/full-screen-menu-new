@@ -1,1 +1,1 @@
-var myVar="myVar is new!";console.log("Hello World"),console.log(myVar);
+$("#menu-modal-trigger").animatedModal({modalTarget:"menu-modal-01",animatedIn:"fadeIn",animatedOut:"fadeOut",color:"#fff",beforeOpen:function(){console.log("The animation was called")},afterOpen:function(){console.log("The animation is completed")},beforeClose:function(){console.log("The animation was called")},afterClose:function(){console.log("The animation is completed")}});
