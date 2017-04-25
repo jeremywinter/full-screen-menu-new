@@ -1,7 +1,7 @@
 {
-  "name": "gulp-starter-kit",
+  "name": "full-screen-menu-new",
   "version": "1.0.0",
-  "description": "gulp-starter-kit",
+  "description": "full-screen-menu-new",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "jeremy winter",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
