@@ -1,9 +1,16 @@
 @charset "UTF-8";
-/* ---------------------------
-
+/* =========================================
   Main styles 
 
---------------------------- */
+  TABLE OF CONTENTS
+    Classes for testing
+    Base
+    Typography
+    Navigation
+    Containers
+
+
+========================================= */
 /* ---------------------------
 
 	colors 
@@ -12,26 +19,6 @@
 /* ---------------------------
 
 	Mixins
-
---------------------------- */
-/* ---------------------------
-
-	Media Queries 
-
---------------------------- */
-/* ---------------------------
-
-	to use
-
-	.some selector {
-    padding: 2rem;
-    font-size: 1.8rem;
-
-    @include mq('tablet-wide') {
-        padding-top: 4rem;
-        font-size: 2.4rem;
-    }
-}
 
 --------------------------- */
 /*!
@@ -6799,18 +6786,22 @@ button.close {
 .slideOutUp {
   animation-name: slideOutUp; }
 
-.testing {
-  display: -ms-flexbox;
-  display: flex;
-  width: 71.42857%;
-  color: #fff; }
-
+/* class for testing
+------------------------------------------*/
 .red {
   outline: 1px solid red; }
 
 .blue {
   outline: 1px solid blue; }
 
+.testing {
+  display: -ms-flexbox;
+  display: flex;
+  width: 71.42857%;
+  color: #fff; }
+
+/* Base
+------------------------------------------*/
 html,
 body {
   margin: 0;
@@ -6820,12 +6811,6 @@ body {
 body {
   font-family: "Roboto", Helvetica, sans-serif;
   padding-bottom: 40px; }
-
-h1,
-h2,
-h3,
-h4 {
-  color: #1de9b6; }
 
 a {
   color: #1de9b6;
@@ -6840,6 +6825,95 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
+/* Typography
+------------------------------------------*/
+h1,
+h2,
+h3,
+h4 {
+  color: #1de9b6; }
+
+/* Navigation
+------------------------------------------*/
+/* nav bar button over-write*/
+.navbar-default {
+  /*line 4495*/
+  background-color: #f8f8f8;
+  border-color: #e7e7e7; }
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0px; }
+
+.navbar-toggle:focus {
+  outline: 0; }
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 1px; }
+
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #f8f8f8; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #bdbdbd; }
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: none; }
+
+.nav > li {
+  position: relative;
+  display: block; }
+
+.nav > li > a {
+  font-size: 2em;
+  font-weight: 300;
+  position: relative;
+  display: block;
+  padding: 10px 15px; }
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #fff;
+  color: #1de9b6;
+  text-decoration: none; }
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: #eee;
+  border-color: #337ab7; }
+
+.nav .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5; }
+
+.nav > li > a > img {
+  max-width: none; }
+
+/* modal components
+------------------------------------------*/
 #btn-close-modal {
   width: 100%;
   text-align: center;
@@ -6850,17 +6924,15 @@ a:focus {
   position: relative;
   width: 100%;
   text-align: right;
-  margin-top: 30px;
-  padding-right: 30px; }
+  margin-top: 18px;
+  padding-right: 28px; }
 
 .close-btn {
-  transition: all 0.2s;
   cursor: pointer; }
 
-.close-btn:hover {
-  -ms-transform: rotate(90deg);
-      transform: rotate(90deg); }
-
+/*.close-btn:hover {
+  transform:rotate(90deg);
+}*/
 .modal-open {
   overflow: hidden; }
 
@@ -6916,41 +6988,3 @@ a:focus {
 @media (min-width: 992px) {
   .modal-lg {
     width: 900px; } }
-
-.nav {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  background-color: none; }
-
-.nav > li {
-  position: relative;
-  display: block; }
-
-.nav > li > a {
-  font-size: 2em;
-  font-weight: 300;
-  position: relative;
-  display: block;
-  padding: 10px 15px; }
-
-.nav > li > a:hover,
-.nav > li > a:focus {
-  background-color: #fff;
-  color: #1de9b6;
-  text-decoration: none; }
-
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus {
-  background-color: #eee;
-  border-color: #337ab7; }
-
-.nav .nav-divider {
-  height: 1px;
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #e5e5e5; }
-
-.nav > li > a > img {
-  max-width: none; }

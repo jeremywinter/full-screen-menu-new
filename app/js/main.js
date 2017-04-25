@@ -26,3 +26,4 @@ $("#menu-modal-trigger").animatedModal({ // #menu-modal-trigger id on trigger/bu
         console.log("The animation is completed");
     }
 });
+

@@ -1,28 +1,40 @@
-/* ---------------------------
-
+/* =========================================
   Main styles 
 
---------------------------- */
+  TABLE OF CONTENTS
+    Classes for testing
+    Base
+    Typography
+    Navigation
+    Containers
+
+
+========================================= */
 
 @charset "UTF-8";
 @import 'colors';
 @import 'mixins';
-@import 'media';
+//@import 'media';
 @import 'bootstrap';
 @import 'animate';
 
 $font-stack: 'Roboto', Helvetica, sans-serif;
 
-// testing only
+/* class for testing
+------------------------------------------*/
+
+.red { outline: 1px solid red; }
+.blue { outline: 1px solid blue; }
+
+
 .testing {
   display: flex;
   width: percentage(5/7);
   color: $card-white;
 }
 
-.red {outline: 1px solid red;}
-
-.blue {outline: 1px solid blue;}
+/* Base
+------------------------------------------*/
 
 html,
 body {
@@ -36,6 +48,28 @@ body {
   padding-bottom: 40px;
 }
 
+
+a {
+  color:$primary-color;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+/* Typography
+------------------------------------------*/
+
 h1,
 h2,
 h3,
@@ -43,21 +77,104 @@ h4 {
   color: $primary-color;
 }
 
-a {
-  color:$primary-color;
-  text-decoration: none;
-}
-a:hover,
-a:focus {
-  color: #23527c;
-  text-decoration: underline;
-}
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+
+
+/* Navigation
+------------------------------------------*/
+/* nav bar button over-write*/
+
+.navbar-default { /*line 4495*/
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
 }
 
-// modal components
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0px;
+}
+
+.navbar-toggle:focus {
+  outline: 0;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #f8f8f8;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $medium-grey;
+}
+
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: none;
+}
+.nav > li {
+  position: relative;
+  display: block;
+}
+.nav > li > a {
+  font-size: 2em;
+  font-weight: 300;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #fff;
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: #eee;
+  border-color: #337ab7;
+}
+
+.nav .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.nav > li > a > img {
+  max-width: none;
+}
+
+
+/* modal components
+------------------------------------------*/
+
 #btn-close-modal {
   width:100%;
   text-align: center;
@@ -69,18 +186,18 @@ a:focus {
   position: relative;
   width: 100%;
   text-align: right;
-  margin-top: 30px;
-  padding-right: 30px;
+  margin-top: 18px;
+  padding-right: 28px;
 }
 
 .close-btn {
-  transition: all 0.2s;
+  //transition: all 0.2s;
   cursor: pointer;
 }
 
-.close-btn:hover {
+/*.close-btn:hover {
   transform:rotate(90deg);
-}
+}*/
 
 // bootstrap modal styles to over write
 .modal-open {
@@ -161,54 +278,6 @@ a:focus {
     width: 900px;
   }
 }
-
-// end of bootstrap modal styles
-
-// bootstrap nav
-
-.nav {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  background-color: none;
-}
-.nav > li {
-  position: relative;
-  display: block;
-}
-.nav > li > a {
-  font-size: 2em;
-  font-weight: 300;
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-}
-.nav > li > a:hover,
-.nav > li > a:focus {
-  background-color: #fff;
-  color: $primary-color;
-  text-decoration: none;
-}
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus {
-  background-color: #eee;
-  border-color: #337ab7;
-}
-.nav .nav-divider {
-  height: 1px;
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #e5e5e5;
-}
-.nav > li > a > img {
-  max-width: none;
-}
-
-
-
-
-
 
 
 
