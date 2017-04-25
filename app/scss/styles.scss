@@ -5,12 +5,12 @@
 --------------------------- */
 
 @charset "UTF-8";
-@import 'reset';
 @import 'colors';
 @import 'mixins';
 @import 'media';
+@import 'bootstrap';
 
-$font-stack: 'Font name here', Helvetica, sans-serif;
+$font-stack: Helvetica, sans-serif;
 
 // testing only
 .testing {
