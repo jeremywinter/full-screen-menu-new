@@ -8,35 +8,40 @@
     <meta name="author" content="jeremywinter.com">
   	<title>full screen menu made with bootsrap</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="ref/bootstrap.ref.css" rel="stylesheet">
   	<link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 <!-- navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" id="menu-modal-trigger" href="#menu-modal-01">
+    <a href="index.html" class="navbar-brand">Full Menu Demo</a>
+    <div class="navbar-header navbar-rightoff red">
+      <!-- <button class="navbar-toggle" id="menu-modal-trigger" href="#menu-modal-01">
         <span class="icon-bar bar1"></span>
         <span class="icon-bar bar2"></span>
         <span class="icon-bar bar3"></span> 
-      </button>
-      <a href="#" class="navbar-brand">Full Menu Demo</a>
+      </button> -->
+      <div class="open-btn-container red" href="#menu-modal-01" id="menu-modal-trigger">
+        <img class="modal-btn" src="img/close-btn-grey.svg">
+      </div>
     </div>
   </div><!-- //container -->
 </nav><!-- //navbar -->
 
-  <div class="container text-center">
-    <h1>Hello World!</h1>
-  </div>
-  <div class="container text-center">
-    <button class="btn btn-default" id="menu-modal-trigger" href="#menu-modal-01">Modal Menu Demo</button>
-  </div>
+<!-- <div class="container text-center">
+  <h1>Hello World!</h1>
+</div>
+<div class="container text-center">
+  <button class="btn btn-default" id="menu-modal-trigger" href="#menu-modal-01">Modal Menu Demo</button>
+</div> -->
 
 <!-- //////////////////////////////// MODALS -->
   <div id="menu-modal-01"> 
-      <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+    <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+    <div class="container red">
       <div id="close-btn-container" class="close-menu-modal-01">
-          <img class="close-btn" src="img/close-btn-grey.svg">
+          <img class="modal-btn" src="img/close-btn-grey.svg">
       </div>
       <div class="modal-content text-center"> <!--Your modal content goes here-->
           <ul class=nav>
@@ -46,9 +51,10 @@
             <li><a href="index.html">Item 4</a></li>
           </ul>
       </div>
+    </div>
   </div>
-  <script src="minjs/bootstrap.js"></script>
   <script src="minjs/jquery-3.2.1.js"></script>
+  <script src="minjs/bootstrap.js"></script>
   <script src="minjs/animatedModal.js"></script>
 	<script src="minjs/main.js"></script>
 </body>

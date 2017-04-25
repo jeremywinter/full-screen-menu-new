@@ -3,18 +3,33 @@
 	Media Queries 
 
 --------------------------- */
-/* ---------------------------
-
-	to use
-
-	.some selector {
-    padding: 2rem;
-    font-size: 1.8rem;
-
-    @include mq('tablet-wide') {
-        padding-top: 4rem;
-        font-size: 2.4rem;
-    }
+/*
+@media screen and (min-width: 100px) {  
+   >= 100px === min-width
+    default styles targets mobile first
+    style changes when the screen gets larger 
 }
-
---------------------------- */
+@media screen and (max-width: 500px) {  
+    <= 500px === max-width 
+    default styles targets desktops first
+    style changes when the screen gets smaller 
+}
+@media screen and (min-width:100px) and (max-width:500px) {
+  targeting devices with a width between 100px and 200px - nothing more, nothing less.
+}*/
+/*------------------------------------------------
+  Bootstrap 3.3.7 Media Queries
+  Beak points developed for use with bootstrap
+ ------------------------------------------------*/
+/* 14" laptops */
+/* large screens */
+/* Bootstrap 1024px to 1920px */
+/* iPad pro */
+/* iPad */
+/* medium devices */
+/* small tablets */
+/* Bootstrap Nav change. large phones landscape. */
+/* Large phones. Nexus 5, 6. iPhone 6, 6+ */
+/* iPhone 5 portrait  */
+/* sm Phones  */
+/* the end */

@@ -14,8 +14,8 @@
 @charset "UTF-8";
 @import 'colors';
 @import 'mixins';
-//@import 'media';
-@import 'bootstrap';
+@import 'media';
+//@import 'bootstrap';
 @import 'animate';
 
 $font-stack: 'Roboto', Helvetica, sans-serif;
@@ -118,7 +118,6 @@ h4 {
   margin-top: 4px;
 }
 
-
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #f8f8f8;
@@ -127,7 +126,6 @@ h4 {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: $medium-grey;
 }
-
 
 .nav {
   padding-left: 0;
@@ -186,11 +184,21 @@ h4 {
   position: relative;
   width: 100%;
   text-align: right;
-  margin-top: 18px;
-  padding-right: 28px;
+  margin-top: 10px;
+  padding-right: 10px;
 }
 
-.close-btn {
+.open-btn-container {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+  padding-right: 10px;
+
+}
+
+.modal-btn {
   //transition: all 0.2s;
   cursor: pointer;
 }
@@ -279,11 +287,14 @@ h4 {
   }
 }
 
-
-
-
-
-
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+   }
+}
 
 
 

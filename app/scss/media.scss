@@ -5,45 +5,78 @@
 	Media Queries 
 
 --------------------------- */
+/*
+@media screen and (min-width: 100px) {  
+   >= 100px === min-width
+    default styles targets mobile first
+    style changes when the screen gets larger 
+}
+@media screen and (max-width: 500px) {  
+    <= 500px === max-width 
+    default styles targets desktops first
+    style changes when the screen gets smaller 
+}
+@media screen and (min-width:100px) and (max-width:500px) {
+  targeting devices with a width between 100px and 200px - nothing more, nothing less.
+}*/
 
-$breakpoints: (
-  "phone":        400px,
-  "phone-wide":   480px,
-  "phablet":      560px,
-  "tablet-small": 640px,
-  "tablet":       768px,
-  "tablet-wide":  1024px,
-  "desktop":      1248px,
-  "desktop-wide": 1440px
-);
+/*------------------------------------------------
+  Bootstrap 3.3.7 Media Queries
+  Beak points developed for use with bootstrap
+ ------------------------------------------------*/
 
-@mixin mq($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
+ /* 14" laptops */
+@media screen and (max-width:1400px) {
 
-    $width: map_get($breakpoints, $width);
-
-    @if $type == max {
-        $width: $width - 1px;
-    }
-
-    @media only screen and (#{$type}-width: $width) {
-        @content;
-    }
-  }
 }
 
-/* ---------------------------
+/* large screens */
+@media screen and (max-width: 1200px) {
 
-	to use
-
-	.some selector {
-    padding: 2rem;
-    font-size: 1.8rem;
-
-    @include mq('tablet-wide') {
-        padding-top: 4rem;
-        font-size: 2.4rem;
-    }
 }
 
---------------------------- */
+/* Bootstrap 1024px to 1920px */
+@media screen and (min-width:1024px) and (max-width:1920px) {
+
+}
+
+/* iPad pro */
+@media screen and (min-width:1024px) and (max-width:1366px) {
+
+}
+
+/* iPad */
+@media screen and (max-width: 1024px) { 
+
+}
+
+/* medium devices */
+@media screen and (max-width: 992px) {
+
+}
+
+/* small tablets */
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+}
+
+/* Bootstrap Nav change. large phones landscape. */
+@media screen and (max-width: 767px) {
+
+}
+
+/* Large phones. Nexus 5, 6. iPhone 6, 6+ */
+@media screen and (min-width:375px) and (max-width:736px) {
+
+}
+
+/* iPhone 5 portrait  */ 
+@media screen and (max-width: 320px) {
+
+}
+
+/* sm Phones  */
+@media screen and (min-width:320px) and (max-width: 360px) {
+
+}
+/* the end */
